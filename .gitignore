@@ -23,7 +23,6 @@
 *.o.*
 *.order
 *.patch
-*.s
 *.su
 *.swp
 *.tab.[ch]
