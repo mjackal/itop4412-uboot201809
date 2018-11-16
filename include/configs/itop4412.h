@@ -13,8 +13,6 @@
 /* High Level Configuration Options */
 #define CONFIG_EXYNOS4412		1	/* which is a EXYNOS4412 SoC */
 #define CONFIG_ITOP4412			1	/* working with ITOP4412*/
-#define CONFIG_SPL_SERIAL_SUPPORT
-#define CONFIG_SPL_GPIO_SUPPORT
 
 /* DEBUG UART */
 #define CONFIG_DEBUG_UART		1       
