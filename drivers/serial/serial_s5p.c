@@ -62,12 +62,20 @@ static const int udivslot[] = {
 static void __maybe_unused s5p_serial_init(struct s5p_uart *uart)
 {
 	/* enable FIFOs, auto clear Rx FIFO */
+#ifdef CONFIG_ITOP4412
+	writel(0x111, &uart->ufcon);
+#else
 	writel(0x3, &uart->ufcon);
+#endif
 	writel(0, &uart->umcon);
 	/* 8N1 */
 	writel(0x3, &uart->ulcon);
 	/* No interrupts, no DMA, pure polling */
+#ifdef CONFIG_ITOP4412
+	writel(0x3c5, &uart->ucon);
+#else
 	writel(0x245, &uart->ucon);
+#endif
 }
 
 static void __maybe_unused s5p_serial_baud(struct s5p_uart *uart, uint uclk,
