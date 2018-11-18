@@ -9,6 +9,7 @@
 #define __CONFIG_ITOP4412_H
 
 #include <configs/exynos4-common.h>
+
 /* For arch/arm/cpu/armv7/lowlevel_init.S */
 #undef CONFIG_SKIP_LOWLEVEL_INIT_ONLY
 #undef CONFIG_SKIP_LOWLEVEL_INIT

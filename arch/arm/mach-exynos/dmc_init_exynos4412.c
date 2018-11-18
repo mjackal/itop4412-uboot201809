@@ -26,7 +26,7 @@
 #include <config.h>
 #include <asm/arch/dmc.h>
 #include "common_setup.h"
-#include "itop4412_setup.h"
+#include "exynos4412_setup.h"
 
 struct mem_timings mem = {
 	.direct_cmd_msr = {
@@ -35,16 +35,16 @@ struct mem_timings mem = {
 	.timingref = 0x000000BB,
     .timingrow = 0x4046654f,
     .timingdata = 0x46400506,
-    .timingpower = 0x52000A3C,
-    .zqcontrol = 0xE3854C03,
+    .timingpower = 0x5200183C,
+    .zqcontrol = 0xE3855503,
     .control0 = 0x71101008,
     .control1 = 0xe0000086,
     .control2 = 0x00000000,
-    .concontrol = 0x0FFF301A,
+    .concontrol = 0x0FFF30CA,
     .prechconfig = 0xff000000,
     .memcontrol = 0x00312640,
-    .memconfig0 = 0x40e01323,
-    .memconfig1 = 0x60e01323,
+    .memconfig0 = 0x40C01333,
+    .memconfig1 = 0x80C01333,
     .dll_resync = FORCE_DLL_RESYNC,
     .dll_on = DLL_CONTROL_ON,
 };
